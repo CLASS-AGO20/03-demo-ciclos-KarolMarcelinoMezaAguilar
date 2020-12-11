@@ -34,7 +34,24 @@ export default class App {
     
     // Función que  (while)
 
-    A
+    sumarParesWhile(){
+
+        let i = 1;
+        let suma = 0;
+
+        while(i <= 20){
+
+            if(i%2===0){
+                suma = suma + i;
+            }
+            
+            i = i + 1;
+
+        }
+
+        return suma;
+
+    }
 
     // Función que  (while)
 
@@ -60,7 +77,7 @@ console.log(app.contarImparesFor(5, 10));
 console.log(app.contarImparesFor(5, 11));
 
 // F3
-
+console.log(app.sumarParesWhile());
 
 // F4
 

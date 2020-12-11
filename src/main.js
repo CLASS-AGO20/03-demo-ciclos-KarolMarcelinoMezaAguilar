@@ -18,7 +18,19 @@ export default class App {
 
     // Función que determine cuantos números impares hay en un intervalo (for)
 
-    A
+    contarImparesFor(inicio, fin){
+
+        let impares = 0;
+
+        for(let i=inicio; i<=fin; i=i+1){
+            if(i%2 !== 0){
+                impares = impares + 1;
+            }
+        }
+
+        return impares;
+
+    }
     
     // Función que  (while)
 
@@ -44,7 +56,8 @@ let app = new App();
 console.log(app.sumarParesFor());
 
 // F2
-
+console.log(app.contarImparesFor(5, 10));
+console.log(app.contarImparesFor(5, 11));
 
 // F3
 

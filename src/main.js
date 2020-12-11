@@ -92,7 +92,29 @@ export default class App {
 
     // Función que determine cuantos números impares hay en un intervalo (do while)
 
-    A
+    contarImparesDo(inicio, fin){
+
+        if(inicio > fin){
+            let t = inicio;
+            inicio = fin;
+            fin = t;
+        }
+
+        let i = inicio;
+        let impares = 0;
+
+        do{
+
+            if(i%2 !== 0){
+                impares++;
+            }
+
+            i++;
+
+        }while(i<=fin);
+
+        return ;
+    }
 
 }
 
@@ -116,4 +138,5 @@ console.log(app.contarImparesWhile(5, 11));
 console.log(app.sumarParesDo());
 
 // F6
-
+console.log(app.contarImparesDo(5, 10));
+console.log(app.contarImparesDo(5, 11));

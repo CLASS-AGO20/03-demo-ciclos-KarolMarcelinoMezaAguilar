@@ -32,7 +32,7 @@ export default class App {
 
     }
     
-    // Función que  (while)
+    // Función que sume los pares que hay entre 1 y 20 (while)
 
     sumarParesWhile(){
 
@@ -53,15 +53,31 @@ export default class App {
 
     }
 
-    // Función que  (while)
+    // Función que determine cuantos números impares hay en un intervalo (while)
+
+    contarImparesWhile(inicio, fin){
+
+        let i = inicio;
+        let impares = 0;
+
+        while(i <= fin){
+            if(i%2 !== 0){
+                impares = impares++;
+            }
+
+            i = i++;
+
+        }
+
+        return impares;
+
+    }
+
+    // Función que sume los pares que hay entre 1 y 20 (do while)
 
     A
 
-    // Función que (do while)
-
-    A
-
-    // Función que (do while)
+    // Función que determine cuantos números impares hay en un intervalo (do while)
 
     A
 
@@ -80,7 +96,8 @@ console.log(app.contarImparesFor(5, 11));
 console.log(app.sumarParesWhile());
 
 // F4
-
+console.log(app.contarImparesWhile(5, 10));
+console.log(app.contarImparesWhile(5, 11));
 
 // F5
 

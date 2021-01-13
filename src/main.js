@@ -6,14 +6,12 @@ export default class App {
 
         let suma = 0;
 
-        for(let i=1; i<=20; i=i+1){
-            if(i%2===0){
-                suma = suma + i;
-            }
+        for (let i = 0; i <= 20; i = i + 2){
+            suma = suma + i;
         }
 
-        return suma;
 
+      return suma;
     }
 
     // Función que determine cuantos números impares hay en un intervalo (for)
@@ -22,14 +20,19 @@ export default class App {
 
         let impares = 0;
 
-        for(let i=inicio; i<=fin; i++){
-            if(i%2 !== 0){
-                impares++;
+        if (inicio > fin){
+            let t = inicio;
+            inicio = fin;
+            fin = t;
+        }
+
+        for (let i = inicio; i <= fin; i = i + 1){
+            if (i % 2 != 0){
+                impares = impares + 1;
             }
         }
 
-        return impares;
-
+      return impares;
     }
     
     // Función que sume los pares que hay entre 1 y 20 (while)
@@ -41,16 +44,14 @@ export default class App {
 
         while(i <= 20){
 
-            if(i%2===0){
+            if(i % 2 == 0){
                 suma = suma + i;
             }
-            
-            i = i + 1;
 
+            i = i + 1;
         }
 
         return suma;
-
     }
 
     // Función que determine cuantos números impares hay en un intervalo (while)
@@ -61,16 +62,14 @@ export default class App {
         let impares = 0;
 
         while(i <= fin){
-            if(i%2 !== 0){
-                impares = impares++;
+            if (i % 2 != 0){
+                impares = impares + 1;
             }
 
-            i = i++;
-
+            i = i + 1;
         }
 
-        return impares;
-
+      return impares;
     }
 
     // Función que sume los pares que hay entre 1 y 20 (do while)
@@ -80,21 +79,22 @@ export default class App {
         let i = 1;
         let suma = 0;
 
-        do{
-
-            if(i%2 === 0){
-                suma = suma + 1;
+        do {
+            if(i % 2 == 0){
+                suma = suma + i;
             }
-            i++;
 
-        }while(i <= 20)
+            i = i + 1;
+        } while (i <= 20);
+
+      return suma;
     }
 
     // Función que determine cuantos números impares hay en un intervalo (do while)
 
     contarImparesDo(inicio, fin){
 
-        if(inicio > fin){
+        if (inicio > fin){
             let t = inicio;
             inicio = fin;
             fin = t;
@@ -103,17 +103,15 @@ export default class App {
         let i = inicio;
         let impares = 0;
 
-        do{
-
-            if(i%2 !== 0){
-                impares++;
+        do {
+            if (i % 2 != 0){
+                impares = impares + 1;
             }
 
-            i++;
+            i = i + 1;
+        } while (i <= fin);
 
-        }while(i<=fin);
-
-        return ;
+      return impares;
     }
 
 }

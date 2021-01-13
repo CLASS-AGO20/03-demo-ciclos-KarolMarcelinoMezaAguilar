@@ -1,3 +1,140 @@
-export default class App {}
+export default class App {
+
+    // Función que determine la suma de los pares entre 1 y 20 (for)
+
+    sumarParesFor(){
+
+        let suma = 0;
+
+        for (let i = 0; i <= 20; i = i + 2){
+            suma = suma + i;
+        }
+
+
+      return suma;
+    }
+
+    // Función que determine cuantos números impares hay en un intervalo (for)
+
+    contarImparesFor(inicio, fin){
+
+        let impares = 0;
+
+        if (inicio > fin){
+            let t = inicio;
+            inicio = fin;
+            fin = t;
+        }
+
+        for (let i = inicio; i <= fin; i = i + 1){
+            if (i % 2 != 0){
+                impares = impares + 1;
+            }
+        }
+
+      return impares;
+    }
+    
+    // Función que sume los pares que hay entre 1 y 20 (while)
+
+    sumarParesWhile(){
+
+        let i = 1;
+        let suma = 0;
+
+        while(i <= 20){
+
+            if(i % 2 == 0){
+                suma = suma + i;
+            }
+
+            i = i + 1;
+        }
+
+        return suma;
+    }
+
+    // Función que determine cuantos números impares hay en un intervalo (while)
+
+    contarImparesWhile(inicio, fin){
+
+        let i = inicio;
+        let impares = 0;
+
+        while(i <= fin){
+            if (i % 2 != 0){
+                impares = impares + 1;
+            }
+
+            i = i + 1;
+        }
+
+      return impares;
+    }
+
+    // Función que sume los pares que hay entre 1 y 20 (do while)
+
+    sumarParesDo(){
+
+        let i = 1;
+        let suma = 0;
+
+        do {
+            if(i % 2 == 0){
+                suma = suma + i;
+            }
+
+            i = i + 1;
+        } while (i <= 20);
+
+      return suma;
+    }
+
+    // Función que determine cuantos números impares hay en un intervalo (do while)
+
+    contarImparesDo(inicio, fin){
+
+        if (inicio > fin){
+            let t = inicio;
+            inicio = fin;
+            fin = t;
+        }
+
+        let i = inicio;
+        let impares = 0;
+
+        do {
+            if (i % 2 != 0){
+                impares = impares + 1;
+            }
+
+            i = i + 1;
+        } while (i <= fin);
+
+      return impares;
+    }
+
+}
 
 let app = new App();
+
+// F1
+console.log(app.sumarParesFor());
+
+// F2
+console.log(app.contarImparesFor(5, 10));
+console.log(app.contarImparesFor(5, 11));
+
+// F3
+console.log(app.sumarParesWhile());
+
+// F4
+console.log(app.contarImparesWhile(5, 10));
+console.log(app.contarImparesWhile(5, 11));
+
+// F5
+console.log(app.sumarParesDo());
+
+// F6
+console.log(app.contarImparesDo(5, 10));
+console.log(app.contarImparesDo(5, 11));
